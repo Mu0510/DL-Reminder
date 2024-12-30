@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分散学習アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>分散学習アプリ</h1>
+        <nav>
+            <a href="#record">学習記録</a>
+            <a href="#review">復習リスト</a>
+            <a href="#settings">設定</a>
+        </nav>
+    </header>
+    <main>
+        <section id="record">
+            <h2>学習記録</h2>
+            <form id="record-form">
+                <label>
+                    学習内容: <input type="text" id="study-content" required>
+                </label>
+                <button type="submit">保存</button>
+            </form>
+            <ul id="record-list"></ul>
+        </section>
+        <section id="review">
+            <h2>復習リスト</h2>
+            <ul id="review-list"></ul>
+        </section>
+        <section id="settings">
+            <h2>設定</h2>
+            <label>
+                復習サイクル (日数):
+                <input type="number" id="review-cycle" min="1" value="7">
+            </label>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
